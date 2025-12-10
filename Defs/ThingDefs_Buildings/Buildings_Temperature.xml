@@ -77,8 +77,8 @@
         <heatPushMaxTemperature>28</heatPushMaxTemperature>
       </li>
       <li Class="CompProperties_FireOverlay">
-        <fireSize>0.5</fireSize>
-        <offset>(0,0,-0.3)</offset>
+        <fireSize>0.57</fireSize>
+        <offset>(0,0,-0.5)</offset>
       </li>
       <li>
         <compClass>CompGatherSpot</compClass>
