@@ -4,15 +4,18 @@
   <ThingDef ParentName="BuildingBase">
     <defName>FirePit</defName>
     <label>FirePit</label>
-    <description>A fire pit supported by two sticks with pot, to provide a little warmth and a place to cook.</description>
+    <description>A fire pit with hanging pot supported by two sticks. Provide a little warmth and a place to cook.</description>
     <thingClass>Building_WorkTable</thingClass>
     <category>Building</category>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
       <texPath>Things/Building/Misc/FirePit/Firepit</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
+			<graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
-      <drawSize>(2,2)</drawSize>
+      <drawSize>(2.6,2.6)</drawSize>
+      <drawOffset>0,0,0.3</drawOffset>
+      <drawRotated>false</drawRotated>
+      <allowFlip>false</allowFlip>
       <damageData>
         <cornerTL>Damage/Corner</cornerTL>
         <cornerTR>Damage/Corner</cornerTR>
@@ -21,7 +24,7 @@
       </damageData>
     </graphicData>
     <uiIconPath>Things/Building/Misc/FirePit/Firepit</uiIconPath>
-    <altitudeLayer>Building</altitudeLayer>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
     <tickerType>Normal</tickerType>
@@ -29,7 +32,7 @@
     <size>(2,1)</size>
     <useHitPoints>true</useHitPoints>
     <statBases>
-      <MaxHitPoints>150</MaxHitPoints>
+      <MaxHitPoints>90</MaxHitPoints>
       <WorkToBuild>140</WorkToBuild>
       <Flammability>0</Flammability>
       <Beauty>5</Beauty>
@@ -39,11 +42,12 @@
     <canOverlapZones>false</canOverlapZones>
     <costStuffCount>75</costStuffCount>
     <stuffCategories>
-      <li>Stony</li>
+      <li>Metallic</li>
     </stuffCategories>
     <coversFloor>true</coversFloor>
     <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
     <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
       <li>PlaceWorker_Heater</li>
       <li>PlaceWorker_GlowRadius</li>
     </placeWorkers>
@@ -64,7 +68,7 @@
         <functionsInVacuum>false</functionsInVacuum>
       </li>
       <li Class="CompProperties_Glower">
-        <glowRadius>12</glowRadius>
+        <glowRadius>5</glowRadius>
         <glowColor>(252,187,113,0)</glowColor>
       </li>
       <li Class="CompProperties_HeatPusher">
@@ -73,11 +77,8 @@
         <heatPushMaxTemperature>28</heatPushMaxTemperature>
       </li>
       <li Class="CompProperties_FireOverlay">
-        <fireSize>1.10</fireSize>
-        <offsetNorth>(0,0,0.2)</offsetNorth>
-        <offsetEast>(0,0,0.2)</offsetEast>
-        <offsetSouth>(0,0,0.2)</offsetSouth>
-        <offsetWest>(0,0,0.2)</offsetWest>
+        <fireSize>0.5</fireSize>
+        <offset>(0,0,-0.3)</offset>
       </li>
       <li>
         <compClass>CompGatherSpot</compClass>
@@ -110,8 +111,21 @@
       </li>
     </comps>
     <designationCategory>Temperature</designationCategory>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <recipes>
+      <li>CookMealSimple</li>
+      <li>CookMealSimpleBulk</li>
+      <li>Make_Pemmican</li>
+      <li>Make_PemmicanBulk</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">Make_BabyFood</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">Make_BabyFoodBulk</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
     <building>
-      <isMealSource>false</isMealSource>
+      <isMealSource>true</isMealSource>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
       <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
       <destroySound>BuildingDestroyed_Wood_Small</destroySound>
