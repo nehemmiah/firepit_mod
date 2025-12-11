@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-    <name>Firepit</name>
+    <name>Campfirepot</name>
     <author>nehemmiah</author>
-    <packageId>nehemmiah.firepitMod</packageId>
+    <packageId>nehemmiah.campfirepot</packageId>
 
     <description>
-        A Simple Firepit.
+        A Hanging Pot over Campfire.
     </description>
 
     <supportedVersions>

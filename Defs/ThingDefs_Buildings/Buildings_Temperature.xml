@@ -2,14 +2,14 @@
 <Defs>
 
   <ThingDef ParentName="BuildingBase">
-    <defName>FirePit</defName>
-    <label>FirePit</label>
-    <description>A fire pit with hanging pot supported by two sticks. Provide a little warmth and a place to cook.</description>
+    <defName>CampfirePot</defName>
+    <label>campfire pot</label>
+    <description>A pot hanging over campfire supported by two branched sticks. Provide a little warmth and a place to cook.</description>
     <thingClass>Building_WorkTable</thingClass>
     <category>Building</category>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
-      <texPath>Things/Building/Misc/FirePit/Firepit</texPath>
+      <texPath>Things/Building/Misc/CampfirePot/CampfirePot</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <drawSize>(2.3,2.3)</drawSize>
@@ -21,7 +21,7 @@
         <cornerBR>Damage/Corner</cornerBR>
       </damageData>
     </graphicData>
-    <uiIconPath>Things/Building/Misc/FirePit/Firepit</uiIconPath>
+    <uiIconPath>Things/Building/Misc/CampfirePot/CampfirePot</uiIconPath>
     <altitudeLayer>BuildingOnTop</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>

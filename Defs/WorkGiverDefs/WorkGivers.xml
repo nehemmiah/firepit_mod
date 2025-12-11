@@ -2,13 +2,13 @@
 <Defs>
 
   <WorkGiverDef>
-    <defName>DoBillsCookFirePit</defName>
-    <label>cook meals at firepit</label>
+    <defName>DoBillsCookCampfirePot</defName>
+    <label>cook meals at campfire pot</label>
     <giverClass>WorkGiver_DoBill</giverClass>
     <workType>Cooking</workType>
     <priorityInType>97</priorityInType>
     <fixedBillGiverDefs>
-      <li>FirePit</li>
+      <li>CampfirePot</li>
     </fixedBillGiverDefs>
     <verb>cook</verb>
     <gerund>cooking at</gerund>
@@ -19,13 +19,13 @@
   </WorkGiverDef>
 
   <WorkGiverDef>
-    <defName>DoBillsHaulFirePit</defName>
-    <label>do bills at firepit</label>
+    <defName>DoBillsHaulCampfirePot</defName>
+    <label>do bills at campfire pot</label>
     <giverClass>WorkGiver_DoBill</giverClass>
     <workType>Hauling</workType>
     <priorityInType>30</priorityInType>
     <fixedBillGiverDefs>
-      <li>FirePit</li>
+      <li>CampfirePot</li>
     </fixedBillGiverDefs>
     <verb>work at</verb>
     <gerund>working at</gerund>
