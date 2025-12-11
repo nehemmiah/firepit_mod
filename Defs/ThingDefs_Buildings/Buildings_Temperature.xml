@@ -10,12 +10,10 @@
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
       <texPath>Things/Building/Misc/FirePit/Firepit</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
+			<graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
-      <drawSize>(2.6,2.6)</drawSize>
+      <drawSize>(2.3,2.3)</drawSize>
       <drawOffset>0,0,0.3</drawOffset>
-      <drawRotated>false</drawRotated>
-      <allowFlip>false</allowFlip>
       <damageData>
         <cornerTL>Damage/Corner</cornerTL>
         <cornerTR>Damage/Corner</cornerTR>
@@ -29,6 +27,7 @@
     <pathCost>50</pathCost>
     <tickerType>Normal</tickerType>
     <fillPercent>0.20</fillPercent>
+    <defaultPlacingRot>North</defaultPlacingRot>
     <size>(2,1)</size>
     <useHitPoints>true</useHitPoints>
     <statBases>
@@ -73,12 +72,15 @@
       </li>
       <li Class="CompProperties_HeatPusher">
         <compClass>CompHeatPusherPowered</compClass>
-        <heatPerSecond>21</heatPerSecond>
-        <heatPushMaxTemperature>28</heatPushMaxTemperature>
+        <heatPerSecond>18</heatPerSecond>
+        <heatPushMaxTemperature>25</heatPushMaxTemperature>
       </li>
       <li Class="CompProperties_FireOverlay">
-        <fireSize>0.57</fireSize>
-        <offset>(0,0,-0.5)</offset>
+        <fireSize>0.52</fireSize>
+        <offsetNorth>(0,0,-0.46)</offsetNorth>
+        <offsetEast>(-0.16,0,-0.46)</offsetEast>
+        <offsetSouth>(0,0,-0.46)</offsetSouth>
+        <offsetWest>(0.16,0,-0.46)</offsetWest>
       </li>
       <li>
         <compClass>CompGatherSpot</compClass>
